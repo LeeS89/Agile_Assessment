@@ -5,13 +5,13 @@ public class GrossPayTest extends TestCase {
     //Test number: 1
     //Objective: Valid grossSales
     //Input(s): grossSales = 40,000
-    //Expected output: 43,800
+    //Expected output: 3,800
     public void testTotalGrossPay001() {
 
         GrossPay grossPay = new GrossPay();
 
         try{
-            assertEquals(43,800,grossPay.TotalGrossPay(40000));
+            assertEquals(3800.00,grossPay.TotalGrossPay(40000));
         }catch(InvalidValueException e)
         {
             fail("No exception expected");
@@ -64,7 +64,7 @@ public class GrossPayTest extends TestCase {
         GrossPay grossPay = new GrossPay();
 
         try{
-            assertEquals(309.00, grossPay.TotalGrossPay(100.00));
+            assertEquals(209.00, grossPay.TotalGrossPay(100.00));
 
         }catch(InvalidValueException e)
         {
@@ -75,13 +75,13 @@ public class GrossPayTest extends TestCase {
     //Test number: 5
     //Objective: Valid high boundary grossSales
     //Input(s): grossSales = 100,000.00
-    //Expected output: 109,200.00
+    //Expected output: 9,200.00
     public void testTotalGrossPay005()
     {
         GrossPay grossPay = new GrossPay();
 
         try{
-            assertEquals(109200.00,grossPay.TotalGrossPay(100000.00));
+            assertEquals(9200.00,grossPay.TotalGrossPay(100000.00));
         }catch(InvalidValueException e)
         {
             fail("No exception expected");
